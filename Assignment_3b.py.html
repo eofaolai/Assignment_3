@@ -1,0 +1,104 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[3]:
+
+
+import pandas as pd
+
+data = pd.read_csv('A3_Dataset.csv')
+
+
+# In[5]:
+
+
+data.shape
+
+
+# In[4]:
+
+
+data
+
+
+# In[7]:
+
+
+data1 = pd.read_json('output.json')
+
+
+# In[9]:
+
+
+data1
+
+
+# In[11]:
+
+
+data2 = pd.read_csv('Company Details')
+data2
+
+
+# In[12]:
+
+
+data3 = pd.read_csv('companys.csv')
+data3
+
+
+# In[13]:
+
+
+data3.shape
+
+
+# In[14]:
+
+
+data4 = pd.read_csv('napu (1).csv')
+data4
+
+
+# In[15]:
+
+
+keep_col = ['Name','Purpose']
+data4_new = data4[keep_col]
+data4_new
+
+
+# In[18]:
+
+
+data5 = pd.read_csv('Webscrp_company.txt',delimiter=':')
+data5
+
+
+# In[19]:
+
+
+data5 = pd.read_csv('Webscrp_company.txt')
+data5
+
+
+# In[20]:
+
+
+data5 = pd.read_csv('Webscrp_company.txt',",")
+data5.to_csv('Webscrp_company_new.csv')
+
+
+# In[21]:
+
+
+data5
+
+
+# In[ ]:
+
+
+s = []
+csvex = csv.writer(open('Webscrp_company.txt','w'), delimiter=':', quoting=csv.QUOTE_ALL)
+csvex.writerows(s)
+
